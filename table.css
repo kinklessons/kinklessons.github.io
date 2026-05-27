@@ -1,0 +1,71 @@
+/* Add or replace your existing table styles with these */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+  background: #222;
+  color: white;
+}
+
+th {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+th:last-child {
+  border-right: none;
+}
+
+td {
+  padding: 16px 18px;
+  vertical-align: top;
+  border-top: 1px solid #e5e5e5;
+  border-right: 1px solid #efefef;
+  line-height: 1.5;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #ececec;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Responsive table scrolling */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 32px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  th,
+  td {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
