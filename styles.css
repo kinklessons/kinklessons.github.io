@@ -26,28 +26,36 @@
   --accent-hover: #8f0f13;
   --accent-soft: #f9e5e6;
 
-  /* Secondary */
+  /* Supporting Colors */
   --secondary: #f3ede8;
   --secondary-text: #4a4a4a;
+  --ivory: #f5f1ea;
 
   /* Borders */
   --border: #ddd4cd;
 
-  /* Logo-inspired ivory */
-  --ivory: #f5f1ea;
-
   /* Shadows */
   --shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+
+  /* Header */
+  --header-start: #b31217;
+  --header-end: #7a0c10;
+
+  /* Navigation */
+  --nav-bg: rgba(255, 255, 255, 0.15);
+  --nav-hover: rgba(255, 255, 255, 0.25);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100%;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -61,10 +69,17 @@ body {
   margin: 0 auto;
 }
 
+/* Header */
+
 .site-header {
-  background: linear-gradient(180deg, #7c3aed 0%, #5b21b6 100%);
-  color: #fff;
+  background: linear-gradient(
+    180deg,
+    var(--header-start) 0%,
+    var(--header-end) 100%
+  );
+  color: var(--ivory);
   padding: 3rem 0 2rem;
+  box-shadow: 0 8px 30px rgba(122, 12, 16, 0.15);
 }
 
 .site-header .container {
@@ -78,19 +93,36 @@ body {
   letter-spacing: 0.2em;
   font-size: 0.8rem;
   margin: 0 0 0.75rem;
-  opacity: 0.9;
+  color: rgba(245, 241, 234, 0.85);
 }
 
 .site-header h1 {
   margin: 0;
   font-size: clamp(2.25rem, 3vw, 3.5rem);
+  color: var(--ivory);
 }
 
 .intro {
   max-width: 50rem;
   margin: 1rem 0 0;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(245, 241, 234, 0.92);
 }
+
+/* Branding */
+
+.site-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.site-logo {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Navigation */
 
 .main-nav {
   display: flex;
@@ -103,18 +135,25 @@ body {
   align-items: center;
   padding: 0.8rem 1.1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: var(--nav-bg);
+  color: var(--ivory);
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(245, 241, 234, 0.15);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--nav-hover);
+  border-color: rgba(245, 241, 234, 0.35);
   transform: translateY(-1px);
 }
+
+/* Cards */
 
 .section-card {
   background: var(--surface);
@@ -123,10 +162,20 @@ body {
   box-shadow: var(--shadow);
   padding: 2rem;
   margin-top: 1.75rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  border-color: rgba(179, 18, 23, 0.25);
+  box-shadow: 0 30px 60px rgba(122, 12, 16, 0.12);
 }
 
 .section-card h2 {
   margin-top: 0;
+  color: var(--accent);
 }
 
 .section-card p {
@@ -144,11 +193,28 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.section-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-card a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Footer */
+
 .site-footer {
   padding: 2rem 0;
   text-align: center;
   color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
 }
+
+/* Responsive */
 
 @media (min-width: 768px) {
   .site-header .container {
@@ -171,19 +237,10 @@ body {
     flex: 1 1 100%;
     justify-content: center;
   }
-}
-.site-brand {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
 
-.site-logo {
-  width: 120px;
-  height: auto;
-  flex-shrink: 0;
-}
-.site-logo {
-  width: 80px;
-  height: auto;
+  .site-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
