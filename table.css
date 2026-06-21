@@ -1,71 +1,82 @@
-/* Add or replace your existing table styles with these */
+/* =========================
+   TABLE STYLES (DARK THEME MATCH)
+   ========================= */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 32px 0;
-  background: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 10px;
+  margin: 2rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow);
 }
 
+/* Header */
 thead {
-  background: #222;
-  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--header-start),
+    var(--header-end)
+  );
+  color: var(--ivory);
 }
 
 th {
-  padding: 16px 18px;
+  padding: 1rem 1.25rem;
   text-align: left;
-  font-size: 15px;
-  letter-spacing: 0.3px;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-right: 1px solid rgba(245, 241, 234, 0.08);
+  font-weight: 600;
 }
 
 th:last-child {
   border-right: none;
 }
 
+/* Cells */
 td {
-  padding: 16px 18px;
+  padding: 1rem 1.25rem;
   vertical-align: top;
-  border-top: 1px solid #e5e5e5;
-  border-right: 1px solid #efefef;
-  line-height: 1.5;
+  border-top: 1px solid var(--border);
+  border-right: 1px solid rgba(176, 176, 176, 0.08);
+  line-height: 1.6;
+  color: var(--text);
 }
 
 td:last-child {
   border-right: none;
 }
 
-/* Alternating row colors */
+/* Row striping using theme surfaces */
 tbody tr:nth-child(odd) {
-  background-color: #ffffff;
+  background: var(--surface);
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f7f7f7;
+  background: #14151a; /* slightly deeper than surface for contrast */
 }
 
-/* Hover effect */
+/* Hover effect aligned with your card hover */
 tbody tr:hover {
-  background-color: #ececec;
+  background: var(--surface-hover);
   transition: background-color 0.15s ease-in-out;
 }
 
-/* Responsive table scrolling */
+/* Responsive wrapper */
 .table-wrapper {
   overflow-x: auto;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
 
-/* Mobile adjustments */
+/* Mobile tweaks */
 @media (max-width: 900px) {
   th,
   td {
-    padding: 14px;
-    font-size: 14px;
+    padding: 0.85rem;
+    font-size: 0.9rem;
   }
 }
