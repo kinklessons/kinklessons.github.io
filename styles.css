@@ -1,49 +1,40 @@
-/*:root {
-  color-scheme: light;
-  --bg: #f8f6f4;
-  --surface: #ffffff;
-  --text: #1f2937;
-  --muted: #4b5563;
-  --accent: #7c3aed;
-  --accent-soft: #ede9fe;
-  --border: #e5e7eb;
-  --shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
-}*/
-
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   /* Backgrounds */
-  --bg: #f5f2ef;
-  --surface: #ffffff;
+  --bg: #0d0d0f;
+  --surface: #17181c;
+  --surface-hover: #1f2126;
 
   /* Text */
-  --text: #1b1b1b;
-  --muted: #5f5f5f;
+  --text: #f5f1ea;
+  --muted: #b0b0b0;
 
   /* Brand Colors */
-  --accent: #b31217;
-  --accent-hover: #8f0f13;
-  --accent-soft: #f9e5e6;
+  --accent: #c4161c;
+  --accent-hover: #e01c23;
+  --accent-soft: #2a1314;
 
-  /* Supporting Colors */
-  --secondary: #f3ede8;
-  --secondary-text: #4a4a4a;
-  --ivory: #f5f1ea;
+  /* Secondary */
+  --secondary: #24262c;
+  --secondary-text: #d6d6d6;
 
   /* Borders */
-  --border: #ddd4cd;
+  --border: #2b2d33;
 
-  /* Shadows */
-  --shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  /* Logo-inspired ivory */
+  --ivory: #f5f1ea;
 
   /* Header */
-  --header-start: #b31217;
-  --header-end: #7a0c10;
+  --header-start: #151518;
+  --header-end: #0d0d0f;
 
   /* Navigation */
-  --nav-bg: rgba(255, 255, 255, 0.15);
-  --nav-hover: rgba(255, 255, 255, 0.25);
+  --nav-bg: rgba(196, 22, 28, 0.12);
+  --nav-hover: rgba(196, 22, 28, 0.22);
+
+  /* Shadows */
+  --shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -69,17 +60,20 @@ body {
   margin: 0 auto;
 }
 
-/* Header */
+/* =========================
+   HEADER
+   ========================= */
 
 .site-header {
   background: linear-gradient(
-    180deg,
+    135deg,
     var(--header-start) 0%,
     var(--header-end) 100%
   );
   color: var(--ivory);
   padding: 3rem 0 2rem;
-  box-shadow: 0 8px 30px rgba(122, 12, 16, 0.15);
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .site-header .container {
@@ -87,28 +81,6 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8rem;
-  margin: 0 0 0.75rem;
-  color: rgba(245, 241, 234, 0.85);
-}
-
-.site-header h1 {
-  margin: 0;
-  font-size: clamp(2.25rem, 3vw, 3.5rem);
-  color: var(--ivory);
-}
-
-.intro {
-  max-width: 50rem;
-  margin: 1rem 0 0;
-  color: rgba(245, 241, 234, 0.92);
-}
-
-/* Branding */
 
 .site-brand {
   display: flex;
@@ -120,9 +92,35 @@ body {
   width: 80px;
   height: auto;
   flex-shrink: 0;
+  filter:
+    drop-shadow(0 0 10px rgba(196, 22, 28, 0.25))
+    drop-shadow(0 0 20px rgba(196, 22, 28, 0.15));
 }
 
-/* Navigation */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  margin: 0 0 0.75rem;
+  color: rgba(245, 241, 234, 0.75);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 3vw, 3.5rem);
+  color: var(--ivory);
+  text-shadow: 0 0 20px rgba(196, 22, 28, 0.2);
+}
+
+.intro {
+  max-width: 50rem;
+  margin: 1rem 0 0;
+  color: rgba(245, 241, 234, 0.85);
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
 
 .main-nav {
   display: flex;
@@ -139,21 +137,23 @@ body {
   color: var(--ivory);
   text-decoration: none;
   font-weight: 600;
-  border: 1px solid rgba(245, 241, 234, 0.15);
+  border: 1px solid rgba(196, 22, 28, 0.25);
   transition:
     background 0.2s ease,
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
   background: var(--nav-hover);
-  border-color: rgba(245, 241, 234, 0.35);
-  transform: translateY(-1px);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
-/* Cards */
+/* =========================
+   CONTENT CARDS
+   ========================= */
 
 .section-card {
   background: var(--surface);
@@ -164,13 +164,16 @@ body {
   margin-top: 1.75rem;
   transition:
     transform 0.2s ease,
+    background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .section-card:hover {
-  border-color: rgba(179, 18, 23, 0.25);
-  box-shadow: 0 30px 60px rgba(122, 12, 16, 0.12);
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
 }
 
 .section-card h2 {
@@ -193,28 +196,85 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.section-card a {
+/* =========================
+   LINKS
+   ========================= */
+
+a {
   color: var(--accent);
-  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+.section-card a {
   font-weight: 600;
+  text-decoration: none;
 }
 
 .section-card a:hover {
-  color: var(--accent-hover);
   text-decoration: underline;
 }
 
-/* Footer */
+/* =========================
+   BUTTONS (if used later)
+   ========================= */
+
+button {
+  background: var(--accent);
+  color: var(--ivory);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .site-footer {
   padding: 2rem 0;
+  margin-top: 3rem;
   text-align: center;
   color: var(--muted);
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
 }
 
-/* Responsive */
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3d44;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (min-width: 768px) {
   .site-header .container {
@@ -242,5 +302,9 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .site-logo {
+    width: 70px;
   }
 }
