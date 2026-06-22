@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Site | Kink Lessons</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script>
+fetch("/components/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer-placeholder").innerHTML = html;
+  });
+fetch("/components/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-placeholder").innerHTML = html;
+  });  
+</script>
+<style>
+.updated {
+    color: var(--muted);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+.notice {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-top: 2rem;
+}
+
+</style>  
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+      
+
+<section  class="container section-card">
+    <h1>About the Site</h1>
+<p>KinkLessons is a collection of educational, exploratory, and self-reflection tools designed to help people better understand kink, communication, boundaries, and compatibility in consensual adult dynamics.</p>
+<p></p>
+<p>The project is built as a modular set of static web tools hosted via GitHub Pages.</p>
+</section>
+
+<section>
+    <h1>Contacting us and Raising Issues</h1>
+
+    <p>This site is entirely hosted on Github so issues should be raised through the respective repos.</p>
+
+    <ul>
+        <li><a href="https://github.com/kinklessons/kinklessons.github.io/issues">Main Site</a></li>
+        <li><a href="https://github.com/kinklessons/kink-glossary/issues">Glossary</a></li>
+        <li><a href="https://github.com/kinklessons/kink-questionnaire/issues">Questionnaire</a></li>
+        <li><a href="https://github.com/kinklessons/compare-questionnaire/issues">Compare Questionnaire</a></li>        
+    </ul>
+
+</section>
+
+
+  </main>
+
+<div id="footer-placeholder"></div>
+</body>
+</html>
