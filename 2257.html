@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions | Kink Lessons</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script>
+fetch("/components/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer-placeholder").innerHTML = html;
+  });
+fetch("/components/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-placeholder").innerHTML = html;
+  });  
+</script>
+<style>
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+}
+.updated {
+    color: var(--muted);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+.notice {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-top: 2rem;
+}
+
+</style>  
+</head>
+<body>
+   <div id="header-placeholder"></div>
+
+  <main class="container section-card">
+
+<section>
+ <div class="container">
+    <div class="card">
+
+        <h1>18 U.S.C. § 2257 Exemption Statement</h1>
+
+        <p>
+            KinkLessons.com is an educational and informational website discussing
+            BDSM, kink, fetish, relationships, consent, safety, and related adult
+            topics.
+        </p>
+
+        <p>
+            Pursuant to 18 U.S.C. § 2257, 28 C.F.R. Part 75, and applicable federal
+            regulations, the operators of this website are exempt from the record
+            keeping requirements of 18 U.S.C. § 2257 and 28 C.F.R. Part 75 because
+            this website does not produce, publish, or distribute visual depictions
+            of actual sexually explicit conduct as defined by federal law.
+        </p>
+
+        <p>
+            The content appearing on this website consists primarily of educational
+            articles, definitions, informational resources, questionnaires, guides,
+            and other textual content intended to educate adults about consensual
+            kink and BDSM practices.
+        </p>
+
+        <p>
+            To the extent that any images, illustrations, graphics, icons, diagrams,
+            logos, or similar visual materials appear on this website, they do not
+            constitute depictions of actual sexually explicit conduct as defined by
+            18 U.S.C. § 2256 and therefore are not subject to the record-keeping
+            requirements of 18 U.S.C. § 2257.
+        </p>
+
+        <p>
+            Any third-party content linked from this website remains the sole
+            responsibility of the respective third-party content provider.
+            KinkLessons.com neither controls nor assumes responsibility for the
+            compliance practices of external websites.
+        </p>
+
+        <div class="notice">
+            <strong>Important Notice:</strong>
+            KinkLessons.com is intended exclusively for adults who are at least
+            eighteen (18) years of age or the age of majority in their jurisdiction,
+            whichever is greater.
+        </div>
+
+    </div>
+
+    <footer>
+        Last Updated: June 2026
+    </footer>
+</div>
+</section>
+
+  </main>
+
+<div id="footer-placeholder"></div>
+</body>
+</html>
