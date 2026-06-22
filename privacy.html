@@ -6,7 +6,18 @@
   <title>Terms and Conditions | Kink Lessons</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="/favicon.png">
-
+  <script>
+fetch("/components/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer-placeholder").innerHTML = html;
+  });
+fetch("/components/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-placeholder").innerHTML = html;
+  });  
+</script>
 <style>
 .card {
     background: var(--surface);
@@ -41,32 +52,7 @@ li {
 </style>  
 </head>
 <body>
-   <header class="site-header">
-    <div class="container">
-            <img
-        src="assets/kink-lessons-logo.png"
-        alt="Kink Lessons Logo"
-        class="site-logo" style="width: 200px; height: auto; margin-right: 1rem;"
-      />
-      <div>
-        <p class="eyebrow">Kink Lessons</p>
-        <h2>Beginner-friendly resources for kink newcomers</h2>
-        <p class="intro">A safe, clear introduction to core topics including Kink 101, consent, bondage, rope, impact play, and D/s dynamics.</p>
-      </div>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="kink101.html">Kink101</a>        
-        <a href="consent.html">Consent</a>
-        <a href="bondage.html">Bondage</a>
-        <a href="rope.html">Rope</a>
-        <a href="impact.html">Impact</a>
-        <a href="ds.html">D/s</a> 
-        <a href="resources.html">Resources</a>         
-        <a href="https://kinklessons.github.io/kink-glossary/">Glossary</a>
-        <a href="https://kinklessons.github.io/kink-questionnaire/">Questionnaire</a>
-      </nav>
-    </div>
-  </header>
+   <div id="header-placeholder"></div>
 
   <main class="container section-card">
 <section>
@@ -76,15 +62,6 @@ li {
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Created as an introductory resource. Always prioritize communication, consent, and safety.</p>
-     <p>
-      <a href="/privacy.html">Privacy Policy</a> ·
-      <a href="/terms.html">Terms</a> ·
-      <a href="/2257.html">2257</a>
-    </p>
-  </div>    
-  </footer>
+<div id="footer-placeholder"></div>
 </body>
 </html>
