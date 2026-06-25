@@ -24,15 +24,135 @@
   <meta name="apple-mobile-web-app-title" content="Kink Lessons">
   <meta name="description"
       content="Free educational resources covering kink, BDSM, consent, communication, safety, bondage, impact play, and aftercare.">     
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Kink Lessons",
-  "url": "https://kinklessons.com",
-  "description": "Educational resources about BDSM, kink, consent, communication, safety, bondage, impact play, and aftercare."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://kinklessons.com/#organization",
+      "name": "Kink Lessons",
+      "url": "https://kinklessons.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kinklessons.com/assets/kink-lessons-logo.png"
+      },
+      "sameAs": [],
+      "description": "Educational resource focused on consent-based kink education, safety, communication, and foundational BDSM concepts.",
+      "foundingDate": "2026"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kinklessons.com/#website",
+      "url": "https://kinklessons.com/",
+      "name": "Kink Lessons",
+      "publisher": {
+        "@id": "https://kinklessons.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kinklessons.com/#webpage",
+      "url": "https://kinklessons.com/",
+      "name": "Kink Lessons - Learn Kink Safely and Responsibly",
+      "description": "A structured educational guide to kink, BDSM, consent, safety, communication, and beginner-friendly practices.",
+      "isPartOf": {
+        "@id": "https://kinklessons.com/#website"
+      },
+      "about": {
+        "@id": "https://kinklessons.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kinklessons.com/#breadcrumbs",
+      "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://kinklessons.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://kinklessons.com/2257.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://kinklessons.com/about.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://kinklessons.com/aftercare.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://kinklessons.com/bondage.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://kinklessons.com/consent.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://kinklessons.com/ds.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://kinklessons.com/impact.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://kinklessons.com/kink101.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://kinklessons.com/privacy.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://kinklessons.com/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://kinklessons.com/rope.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://kinklessons.com/terms.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://kinklessons.github.io/kink-glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://kinklessons.github.io/kink-questionnaire/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://kinklessons.com/compare-questionnaire/"
+    }
+  ]
+    }
+  ]
 }
-  </script>  
+</script> 
   <script>
 fetch("/components/footer.html")
   .then(res => res.text())
