@@ -1,0 +1,8 @@
+{
+  "name": "Kink Lessons",
+  "short_name": "Kink Lessons",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0d0d0f",
+  "background_color": "#0d0d0f"
+}
