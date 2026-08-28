@@ -386,7 +386,7 @@ button:hover {
 }
 
 .callout {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid #c7a0ff;
   background: var(--panel2);
   padding: 20px 22px;
   border-radius: 0 14px 14px 0;
@@ -422,7 +422,7 @@ button:hover {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--accent);
+  background: #c7a0ff;
   color: #17121d;
   font-weight: 900
 }
