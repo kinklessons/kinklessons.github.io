@@ -379,7 +379,7 @@ button:hover {
   padding: 4px 9px;
   border-radius: 999px;
   background: #2b2635;
-  color: var(--accent);
+  color: #c7a0ff;
   font-size: .78rem;
   font-weight: 700;
   margin: 0 5px 7px 0
@@ -470,7 +470,7 @@ textarea {
 button.primary {
     border: 0;
     border-radius: 10px;
-    background: var(--accent);
+    background: #c7a0ff;
     color: #17121d;
     font-weight: 800;
     padding: 11px 16px;
