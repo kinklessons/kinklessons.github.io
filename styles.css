@@ -149,8 +149,8 @@ body {
     transform 0.2s ease;
 }
 
-.alt-nav a:hover,
-.alt-nav a:focus-visible {
+.main-nav a:hover,
+.main-nav a:focus-visible {
   background: var(--nav-hover);
   border-color: var(--accent);
   transform: translateY(-2px);
