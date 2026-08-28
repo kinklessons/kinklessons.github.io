@@ -17,12 +17,17 @@ fetch("/components/header.html")
   .then(res => res.text())
   .then(html => {
     document.getElementById("header-placeholder").innerHTML = html;
-  });  
+  });
+fetch("/components/hightlight.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("highlight-placeholder").innerHTML = html;
+  });    
 </script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-
+  <div id="highlight-placeholder"></div>
   <main class="container section-card">
      <div class="wrap">
     <h2>The Foundation</h2>
