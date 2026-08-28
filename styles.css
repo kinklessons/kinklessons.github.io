@@ -332,14 +332,14 @@ button:hover {
   width: min(calc(100% - 32px), var(--max));
   margin: auto
 }
-
+/*
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: .16em;
     font-size: .78rem;
     color: var(--accent2);
     font-weight: 800
-}
+}*/
 .lead {
     font-size: 1.18rem;
     color: var(--muted);
