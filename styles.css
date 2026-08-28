@@ -312,7 +312,7 @@ button:hover {
    Images
    ========================= */
 
-.demoimage img {
+.demoimage {
   margin:auto;
   padding:10px;
   width:75%;
