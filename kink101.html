@@ -17,6 +17,11 @@ fetch("/components/header.html")
   .then(html => {
     document.getElementById("header-placeholder").innerHTML = html;
   });  
+fetch("/components/highlight.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("highlight-placeholder").innerHTML = html;
+  });  
 </script>
 </head>
 <body>
@@ -118,7 +123,7 @@ Just like in modern BDSM each letter in "BDSM" represents a distinct aspect:
 <div>See <a href="https://fetlife.com/kinktionary/consent-anjvl">FetLife</a> for more information
   </div>    
 </section>
-
+  <div id="highlight-placeholder"></div>
 <div id="footer-placeholder"></div>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9900db7a9ae548f6a1e99f59dda28e1f"}'></script><!-- End Cloudflare Web Analytics --> 
 </body>

@@ -17,6 +17,11 @@ fetch("/components/header.html")
   .then(html => {
     document.getElementById("header-placeholder").innerHTML = html;
   });  
+fetch("/components/highlight.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("highlight-placeholder").innerHTML = html;
+  });  
 </script> 
 </head>
 <body>
@@ -107,7 +112,7 @@ fetch("/components/header.html")
 
 </section>
    
-
+  <div id="highlight-placeholder"></div>
   </main>
 
 <div id="footer-placeholder"></div>

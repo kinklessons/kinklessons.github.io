@@ -18,6 +18,11 @@ fetch("/components/header.html")
   .then(html => {
     document.getElementById("header-placeholder").innerHTML = html;
   });  
+fetch("/components/highlight.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("highlight-placeholder").innerHTML = html;
+  });  
 </script>
 </head>
 <body>
@@ -295,7 +300,7 @@ fetch("/components/header.html")
     See the <a href="aftercare.html">aftercare</a> section for details around aftercare.
   </p>
   </section>
-
+  <div id="highlight-placeholder"></div>
 
 <div id="footer-placeholder"></div>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9900db7a9ae548f6a1e99f59dda28e1f"}'></script><!-- End Cloudflare Web Analytics --> 
