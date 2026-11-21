@@ -14,6 +14,23 @@
     <meta property="og:title" content="Dungeon Etiquette | Kink Lessons">
     <meta property="og:description" content="A practical guide to respectful behavior, consent, safety, and community responsibility in BDSM dungeons.">
     <meta property="og:type" content="article">
+  <script>
+fetch("/components/footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer-placeholder").innerHTML = html;
+  });
+fetch("/components/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-placeholder").innerHTML = html;
+  });  
+fetch("/components/highlight.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("highlight-placeholder").innerHTML = html;
+  });  
+
 </head>
 
 <body>
